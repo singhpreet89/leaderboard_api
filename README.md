@@ -20,6 +20,8 @@
 - **Cascade Soft deletes using: [michaeldyrynda/laravel-cascade-soft-deletes](https://github.com/michaeldyrynda/laravel-cascade-soft-deletes)**
 - **Requests and Rules (Sanitization and Validation)**
 - **Custom Exception Handling**
+- **Scopes**
+- **Mutators and Accessors**
 - **Resources (For Response Transformation)**
 - **Global constants**
 - **Testing (Features, Exceptions and Error Response)**
