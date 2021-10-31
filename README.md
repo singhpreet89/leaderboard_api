@@ -1,65 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400">
+    </a>
+    <a>
+        <h1><p align="center">Leaderboard API</p></h1>
+    </a>
+</p>
+<p align="center">
+    <a href="https://laravel.com/" alt="Built with: Laravel v8.68.1">
+        <img src="https://badgen.net/badge/Built%20with/Laravel%20v8.68.1/FF2D20" />
+    </a>
+    <a href="https://www.php.net/downloads.php" alt="Powered by: PHP v7.4.8">
+        <img src="https://badgen.net/badge/Powered%20by/PHP%20v7.4.8/8892BF" />
+    </a>
 </p>
 
-## About Laravel
+## LARAVEL Features used
+- **Migration and Seeding**
+- **Cascade Soft deletes using: [michaeldyrynda/laravel-cascade-soft-deletes](https://github.com/michaeldyrynda/laravel-cascade-soft-deletes)**
+- **Requests and Rules (Sanitization and Validation)**
+- **Custom Exception Handling**
+- **Resources (For Response Transformation)**
+- **Global constants**
+- **Testing (Features, Exceptions and Error Response)**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Installation and Requirements
+1. Install [Composer](https://getcomposer.org/download/)
+2. Install [Xampp](https://www.apachefriends.org/download.html)
+3. Install [Postman](https://www.postman.com/downloads/)
+4. Clone the repository [GitHub](https://github.com/singhpreet89/leaderboard_api.git)
+```bash
+git clone git@github.com:singhpreet89/leaderboard_api.git
+``` 
+5. Use [Composer](https://getcomposer.org/download/) to install the required dependencies by navigating to the root directory of the cloned repository and run the following command inside the Terminal:
+```bash
+composer install
+``` 
+6. Rename the **".env.example"** file in the root directory to **".env"**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Running the application
+1. Navigate to the root directory and run the following commands:
+```bash
+php artisan key:generate
+php artisan serve
+``` 
+2. Open Xampp and verify PhpMyAdmin is running.
+3. Make sure to create a new database with name ***"leaderboard_api"*** using PhpMyAdmin.
+4. Create the database and add fake data with the following commands:
+```bash
+php artisan migrate
+php artisan db:seed 
+```
+6. Open the Postman and send a GET request to fetch the Leaderboard or a PATCH request to play the **"Leaderboard game"** according to the api calls format in the next section.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Endpoints
+- **(All Endpoints Invluded)** Import the **"Leaderboard API.postman_collection.json"** into Postman. 
+- A quick overview of some of the Leaderboard API structure is as follows:
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| Description | Endpoints | HTTP Method | HEADERS | Payload |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Get the Leaderboard (All Users): | `http://localhost:6000/api/users` | GET | content-type: contentTypeJson | |
+| Play the Game: | `http://localhost:6000/api/users/{user_id}` | PATCH | content-type: contentTypeJson | Select **"raw"** data, with content-type: contentTypeJson, {"operation" : "subtraction"} or {"operation" : "addition"} |
+| Create a User: | `http://localhost:6000/api/users` | POST | content-type: contentTypeJson | Select the **"raw"** data as follows: {"name" : "harpreet singh", "email" : "harpreet.singh@yopmail.com", "birth_date" : "01/01/1972", "line1" : "59 Alpine drive", "line2" : "Apt. 714", "city" : "Ottawa", "province" : "Ontario", "country" : "CA", "postal_code" : "K2B 1G1"} |
+| View a User: | `http://localhost:6000/api/users/{user_id}` | GET | content-type: contentTypeJson | |
+| Delete a User: | `http://localhost:6000/api/users/{user_id}` | DELETE | content-type: contentTypeJson | |
