@@ -58,6 +58,16 @@ php artisan db:seed
 ```
 6. Open the Postman and send a GET request to fetch the Leaderboard or a PATCH request to play the **"Leaderboard game"** according to the api calls format in the next section.
 
+## Testing (Features & Custom Exception Handling)
+- Run the tests using following commands
+ ```bash
+php artisan test
+```
+        OR
+```bash
+./vendor/bin/phpunit
+```
+
 ## Endpoints
 - Import the **"Leaderboard API.postman_collection.json"** into **Postman** to Test on **http://localhost:6000/api/**
 - Import the **"Leaderboard API (Server).postman_collection.json"** into **Postman** to Test on **https://test.singhpreet.ca/api/**
