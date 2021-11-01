@@ -15,6 +15,9 @@
     </a>
 </p>
 
+## Leaderboard API Demo (Additional links in the section [Endpoints](#Endpoints)):
+- `https://test.singhpreet.ca/api/users`
+
 ## LARAVEL Features used
 - **Migration and Seeding**
 - **Cascade Soft deletes using: [michaeldyrynda/laravel-cascade-soft-deletes](https://github.com/michaeldyrynda/laravel-cascade-soft-deletes)**
@@ -44,7 +47,7 @@ composer install
 1. Navigate to the root directory and run the following commands:
 ```bash
 php artisan key:generate
-php artisan serve
+php artisan serve --port=6000
 ``` 
 2. Open Xampp and verify PhpMyAdmin is running.
 3. Make sure to create a new database with name ***"leaderboard_api"*** using PhpMyAdmin.
@@ -56,13 +59,14 @@ php artisan db:seed
 6. Open the Postman and send a GET request to fetch the Leaderboard or a PATCH request to play the **"Leaderboard game"** according to the api calls format in the next section.
 
 ## Endpoints
-- **(All Endpoints Invluded)** Import the **"Leaderboard API.postman_collection.json"** into Postman. 
-- A quick overview of some of the Leaderboard API structure is as follows:
+- Import the **"Leaderboard API.postman_collection.json"** into **Postman** to Test on **http://localhost:6000/api/**
+- Import the **"Leaderboard API (Server).postman_collection.json"** into **Postman** to Test on **https://test.singhpreet.ca/api/**
+- A quick overview of Leaderboard API structure:
 
 | Description | Endpoints | HTTP Method | HEADERS | Payload |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Get the Leaderboard (All Users): | `http://localhost:6000/api/users` | GET | content-type: contentTypeJson | |
-| Play the Game: | `http://localhost:6000/api/users/{user_id}` | PATCH | content-type: contentTypeJson | Select **"raw"** data, with content-type: contentTypeJson, {"operation" : "subtraction"} or {"operation" : "addition"} |
-| Create a User: | `http://localhost:6000/api/users` | POST | content-type: contentTypeJson | Select the **"raw"** data as follows: {"name" : "harpreet singh", "email" : "harpreet.singh@yopmail.com", "birth_date" : "01/01/1972", "line1" : "59 Alpine drive", "line2" : "Apt. 714", "city" : "Ottawa", "province" : "Ontario", "country" : "CA", "postal_code" : "K2B 1G1"} |
-| View a User: | `http://localhost:6000/api/users/{user_id}` | GET | content-type: contentTypeJson | |
-| Delete a User: | `http://localhost:6000/api/users/{user_id}` | DELETE | content-type: contentTypeJson | |
+| Get the Leaderboard (All Users): | `http://localhost:6000/api/users` `https://test.singhpreet.ca/api/users`  | GET | {"content-type": "application/json"} | |
+| Play the Game: | `http://localhost:6000/api/users/{user_id}` `https://test.singhpreet.ca/api/users/{user_id}` | PATCH | {"content-type": "application/json"} | {"operation" : "subtraction"} or {"operation" : "addition"} | |
+| Create a User: | `http://localhost:6000/api/users` `https://test.singhpreet.ca/api/users` | POST | {"content-type": "application/json"} | {"name" : "harpreet singh", "email" : "harpreet.singh@yopmail.com", "birth_date" : "01/01/1972", "line1" : "59 Alpine drive", "line2" : "Apt. 714", "city" : "Ottawa", "province" : "Ontario", "country" : "CA", "postal_code" : "K2B 1G1"} |
+| View a User: | `http://localhost:6000/api/users/{user_id}` `https://test.singhpreet.ca/api/users/{user_id}` | GET | {"content-type": "application/json"} | |
+| Delete a User: | `http://localhost:6000/api/users/{user_id}` `https://test.singhpreet.ca/api/users/{user_id}` | DELETE | {"content-type": "application/json"} | |

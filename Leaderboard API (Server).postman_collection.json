@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "d2a6623f-9e0a-4c32-97f7-99fed3d17e8d",
+		"name": "Leaderboard API (Server)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users (Server)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://test.singhpreet.ca/api/users",
+					"protocol": "https",
+					"host": [
+						"test",
+						"singhpreet",
+						"ca"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a User (Server)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test.singhpreet.ca/api/users/5",
+					"protocol": "https",
+					"host": [
+						"test",
+						"singhpreet",
+						"ca"
+					],
+					"path": [
+						"api",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new User (Server)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"harpreet singh\",\r\n    \"email\" : \"harpreet.singh@yopmail.com\",\r\n    \"birth_date\" : \"01/01/1972\",\r\n    \"line1\" : \"59 Alpine drive\",\r\n    \"line2\" : \"Apt. 714\",\r\n    \"city\" : \"Ottawa\",\r\n    \"province\" : \"Ontario\",\r\n    \"country\" : \"CA\",\r\n    \"postal_code\" : \"K2B 1G1\"\r\n}"
+				},
+				"url": {
+					"raw": "https://test.singhpreet.ca/api/users",
+					"protocol": "https",
+					"host": [
+						"test",
+						"singhpreet",
+						"ca"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User (Server)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://test.singhpreet.ca/api/users/5",
+					"protocol": "https",
+					"host": [
+						"test",
+						"singhpreet",
+						"ca"
+					],
+					"path": [
+						"api",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User score (Server)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"operation\" : \"subtraction\"\r\n}"
+				},
+				"url": {
+					"raw": "https://test.singhpreet.ca/api/users/5",
+					"protocol": "https",
+					"host": [
+						"test",
+						"singhpreet",
+						"ca"
+					],
+					"path": [
+						"api",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
